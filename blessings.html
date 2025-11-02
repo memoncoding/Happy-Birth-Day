@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blessings For Nahal 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="audioOverlay">
+    <h2>🔊 Click to Play Nasheed</h2>
+    <button onclick="playNasheed()">Play Nasheed & Enter</button>
+  </div>
+
+  <audio id="nasheed" loop>
+    <source src="img/birthday.mpeg" type="audio/mp3">
+  </audio>
+
+  <div class="container" id="mainContent" style="display:none;">
+    <h1 class="glow">🌹 Blessings 🌹</h1>
+
+    <div class="message-box">
+      <p>With every breath, may you feel the mercy of Allah 💫</p>
+      <p>May each of your days be filled with new happiness 💙</p>
+      <p>Wherever you go, may Allah’s light be with you ✨</p>
+      <p>May every prayer of yours be accepted and every sorrow fade away 🌙</p>
+      <p>May your face always shine with a beautiful smile 💖</p>
+      <p>May life bless you with joys beyond your imagination 💐</p>
+      <p>May Allah bless you with a long, healthy, and prosperous life 💫</p>
+      <p>May every hardship stay away from you, and peace stay close 💙</p>
+      <p>May your heart always remain filled with divine light 💎</p>
+      <p>May Allah grant you the most special blessings 🌹</p>
+      <p>Happy Birthday, Nahal 💙 My prayer is that you always keep smiling 💖</p>
+    </div>
+
+    <a href="final.html" class="next-btn">Next Page ➜</a>
+  </div>
+
+<script>
+function playNasheed(){
+  const audio = document.getElementById('nasheed');
+  audio.play().catch(()=>{/* ignore */});
+  document.getElementById('audioOverlay').style.display='none';
+  document.getElementById('mainContent').style.display='block';
+}
+</script>
+</body>
+</html>

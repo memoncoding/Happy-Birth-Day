@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Final Surprise — Nahal 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="audioOverlay">
+    <h2>🔊 Click to Play Nasheed</h2>
+    <button onclick="playNasheed()">Play Nasheed & Enter</button>
+  </div>
+
+  <audio id="nasheed" loop>
+    <source src="img/birthday.mpeg" type="audio/mp3">
+  </audio>
+
+  <!-- fireworks elements (visual) -->
+  <div class="fireworks" aria-hidden="true">
+    <div class="firework" style="left:12%; animation-delay:0s;"></div>
+    <div class="firework" style="left:32%; animation-delay:0.3s;"></div>
+    <div class="firework" style="left:52%; animation-delay:0.6s;"></div>
+    <div class="firework" style="left:72%; animation-delay:0.9s;"></div>
+    <div class="firework" style="left:88%; animation-delay:1.2s;"></div>
+  </div>
+
+  <div class="container" id="mainContent" style="display:none;">
+    <div class="final-head">
+      <h1>🎆 Happy Birthday Nahal 💙</h1>
+      <p>💖</p>
+    </div>
+
+    <div class="gallery" aria-hidden="true">
+      <img src="img/pic6.jpeg" alt="final1">
+      <img src="img/pic7.jpeg" alt="final2">
+      <img src="img/pic8.jpeg" alt="final3">
+    </div>
+
+    <a href="index.html" class="next-btn" style="margin-top:28px">⬅ Back to Start</a>
+  </div>
+
+<script>
+function playNasheed(){
+  const audio = document.getElementById('nasheed');
+  audio.play().catch(()=>{/* ignore */});
+  document.getElementById('audioOverlay').style.display='none';
+  document.getElementById('mainContent').style.display='block';
+}
+</script>
+</body>
+</html>

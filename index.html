@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Nahal 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Overlay - Play Nasheed -->
+  <div id="audioOverlay">
+    <h2>🔊 Click to Play Nasheed</h2>
+    <button onclick="playNasheed()">Play Nasheed & Enter</button>
+  </div>
+
+  <audio id="nasheed" loop>
+    <source src="img/birthday.mpeg" type="audio/mp3">
+  </audio>
+
+  <div class="container" id="mainContent" style="display:none;">
+    <h1 class="glow">🎉 Happy Birthday Nahal 💙</h1>
+
+    <div class="images" aria-hidden="true">
+      <img src="img/pic1.jpeg" alt="">
+      <img src="img/pic2.jpeg" alt="">
+      <img src="img/pic3.jpeg" alt="">
+      <img src="img/pic4.jpeg" alt="">
+      <img src="img/pic5.jpeg" alt="">
+    </div>
+
+    <div class="message-box">
+      <p> 💙</p>
+      <p>Wishing you a day filled with happiness, love, and countless blessings.💐</p>
+      <p>May your birthday be as beautiful and graceful as your heart. 🌙</p>
+      <p>You deserve all the smiles and sunshine in the world today. ✨</p>
+      <p>Wishing you endless joy, peace, and success in everything you do. 💐</p>
+      <p>May this year bring you closer to your dreams and fill your life with light. ✨</p>
+      <p>You’re truly one of a kind — may your special day be just as special as you are. 💫</p>
+      <p>Hope your birthday brings new opportunities, pure happiness, and sweet memories.</p>
+      <p>May your journey ahead be bright, your heart light, and your smile everlasting. 🌷🎁</p>
+      <p>Wishing you good health, great moments, and genuine happiness always.</p>
+      <p>Allah aapko hamesha khush rakhe 💫</p>
+      <p>Happy Birthday Nahal. 💙</p>
+    </div>
+
+    <a href="blessings.html" class="next-btn">Next Page ➜</a>
+  </div>
+
+<script>
+function playNasheed(){
+  const audio = document.getElementById('nasheed');
+  audio.play().catch(()=>{/* ignore */});
+  document.getElementById('audioOverlay').style.display='none';
+  document.getElementById('mainContent').style.display='block';
+}
+</script>
+</body>
+</html>
